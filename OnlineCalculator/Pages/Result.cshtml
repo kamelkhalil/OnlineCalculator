@@ -1,0 +1,41 @@
+﻿@page
+@model ResultModel
+@{
+    ViewData["Title"] = "Test Results";
+}
+
+<h1>Test Results</h1>
+
+<ul>
+    <li>A is <span class="@Model.IsAPrimeNumberText.ToLower()">@Model.IsAPrimeNumberText</span>.</li>
+    <li>A is <span class="@Model.IsADivisorOfBText.ToLower()">@Model.IsADivisorOfBText</span> of B.</li>
+    <li>C is <span class="@Model.IsCDivisorOfABText.ToLower()">@Model.IsCDivisorOfABText</span> of A + B.</li>
+</ul>
+
+<h2 style="margin-bottom: 5000px;">
+    <a asp-page="/Index">
+        Back to Input
+        <i class="bi bi-sign-turn-left"></i>
+    </a>
+    
+</h2>
+
+
+<style>
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    .true {
+        color: green;
+    }
+
+    .false {
+        color: red;
+    }
+</style>

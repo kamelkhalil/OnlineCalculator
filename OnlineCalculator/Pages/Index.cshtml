@@ -1,0 +1,34 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Online Calculator";
+}
+
+<h1>Online Calculator</h1>
+
+<form method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <label for="A">A:</label>
+        <input asp-for="Input.A" class="form-control" required min="1" max="300" />
+        <span asp-validation-for="Input.A" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="B">B:</label>
+        <input asp-for="Input.B" class="form-control" required min="1" max="300" />
+        <span asp-validation-for="Input.B" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="C">C:</label>
+        <input asp-for="Input.C" class="form-control" required min="1" max="300" />
+        <span asp-validation-for="Input.C" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Make All Tests</button>
+</form>
+<div class="col-md-4">
+    <img src="/images/2.jpg" alt="Image" class="img-fluid">
+</div>
